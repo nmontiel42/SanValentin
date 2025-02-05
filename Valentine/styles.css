@@ -1,0 +1,225 @@
+/* Main Page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3c6c1;
+    /* Rosa suave, color romántico */
+    min-height: 100vh;
+    max-height: fit-content;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* Fuentes más suaves y elegantes */
+    overflow: hidden;
+}
+
+#app {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fondo translúcido, más suave */
+    padding: 30px;
+    border-radius: 12px;
+    /* Bordes más redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para resaltar el contenedor */
+    z-index: 1;
+}
+
+h1 {
+    color: #d872a0;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+h2 {
+    color: #d872a0;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a7c7;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #f26c91;
+    /* Rosa más oscuro al pasar el mouse */
+    transform: scale(1.1);
+    /* Efecto de aumento al pasar el mouse */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* PopUp */
+#popUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente oscuro */
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff0f0; /* Fondo rosa pálido */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%; /* 80% del ancho de la ventana */
+    max-width: 500px; /* Limita el tamaño máximo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para posicionar los botones abajo */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+}
+
+.popup-content img {
+    width: 100%;
+    max-width: 450px; /* La imagen no será más ancha que 450px */
+    height: auto;
+    border-radius: 8px; /* Bordes suaves para la imagen */
+    margin-bottom: 20px; /* Espacio entre la imagen y los botones */
+}
+
+#resetBtn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #f26c91;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#resetBtn:hover {
+    background-color: #d872a0;
+    /* Tono más suave al hacer hover */
+}
+
+/* Particles */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Asegura que las partículas estén detrás del contenido */
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: hidden;
+        /* Evitar scroll en pantallas muy pequeñas */
+    }
+
+    html {
+        overflow: hidden;
+        /* Evitar scroll en pantallas muy pequeñas */
+    }
+
+    h1 {
+        font-size: 2em;
+        /* Reducir tamaño de fuente en pantallas más pequeñas */
+        margin-bottom: 15px;
+    }
+
+    #app {
+        padding: 20px;
+        width: 90%;
+        /* Ajustar el ancho para pantallas más pequeñas */
+    }
+
+    button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 10px;
+        background-color: #e4a7c7;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+        /* Espaciado vertical en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        overflow: hidden;
+        /* Evitar scroll en pantallas muy pequeñas */
+    }
+
+    html {
+        overflow: hidden;
+        /* Evitar scroll en pantallas muy pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5em;
+        /* Reducir aún más el tamaño de la fuente en pantallas más pequeñas */
+        margin-bottom: 10px;
+    }
+
+    #app {
+        padding: 15px;
+        width: 100%;
+    }
+
+    button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 10px;
+        background-color: #e4a7c7;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .buttons {
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
